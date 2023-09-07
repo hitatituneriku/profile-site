@@ -1,0 +1,212 @@
+/* ベース
+    =========================================================================== */
+:root {
+    --color-black: #404040;
+    --focus-gray: #a0a0a0;
+}
+
+body {
+    overflow-x: hidden;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-black);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* レイアウト
+    =========================================================================== */
+.center {
+    display: block;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px 40px;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translate(-50%, -50%);
+}
+
+.intro__icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.intro {
+    margin: 100px 80px;
+    text-align: center;
+}
+
+.intro__body {
+    margin-top: 60px;
+    line-height: 1.5em;
+}
+
+.intro__article {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.card {
+    margin: 100px 20px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.card__container {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+    list-style-type: none;
+}
+
+.card__img-box {
+    margin-top: 40px;
+}
+.card__body{
+    padding: 15px;
+}
+
+.card__title {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer {
+    margin-bottom: 15px;
+}
+
+
+/* モジュール
+    =========================================================================== */
+.top-btn {
+    display: inline-block;
+    width: 120px;
+    padding: 8px 0;
+    max-width: 100%;
+    background-color: var(--color-black);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.hero__img-box {
+    flex: 1;
+}
+.hero__img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.nav__item {
+    display: inline;
+    padding-left: 15px;
+}
+.nav__item_text:focus,
+.nav__item_text:hover {
+    color: var(--focus-gray);
+}
+.nav__item_text {
+    font-size: 14px;
+}
+
+.intro__author {
+    font-size: 16px;
+}
+.footer-text {
+    display: inline-block;
+    font-size: 8px;
+}
+.sub-title {
+    font-size: 34px;
+    display: inline-block;
+    border-bottom: solid 1.5px var(--color-black);
+}
+.text-m {
+    font-size: 16px;
+    line-height: 1.1em;
+}
+
+
+/* レスポンシブ
+    =========================================================================== */
+/* PC */
+@media(min-width: 600px) {
+
+    /* レイアウト
+    =========================================================================== */
+    .hero {
+        height: 650px;
+    }
+
+    .intro {
+        margin: 160px auto;
+        max-width: 600px;
+    }
+
+    .intro__body {
+        display: flex;
+    }
+
+    .intro__icon {
+        margin-right: 30px;
+    }
+
+    .card__container {
+        flex-flow: row;
+        list-style-type: none;
+    }
+
+    .card {
+        margin: 100px auto;
+    }
+
+    .card__items_first {
+        margin-top: 0;
+    }
+
+    .card__items {
+        margin: 0 10px;
+    }
+
+    /* モジュール
+    =========================================================================== */
+
+}
